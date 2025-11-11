@@ -115,7 +115,7 @@
             saida.ItemHeight = 21;
             saida.Location = new Point(16, 120);
             saida.Name = "saida";
-            saida.Size = new Size(280, 63);
+            saida.Size = new Size(288, 63);
             saida.TabIndex = 25;
             // 
             // entrada
@@ -131,7 +131,7 @@
             entrada.Multiline = false;
             entrada.Name = "entrada";
             entrada.ReadOnly = false;
-            entrada.Size = new Size(280, 54);
+            entrada.Size = new Size(288, 54);
             entrada.TabIndex = 24;
             entrada.TextAlign = HorizontalAlignment.Left;
             entrada.UseSystemPasswordChar = false;
@@ -147,7 +147,7 @@
             entrada_divisao.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_divisao.ImeMode = ImeMode.NoControl;
             entrada_divisao.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_divisao.Location = new Point(232, 208);
+            entrada_divisao.Location = new Point(240, 208);
             entrada_divisao.Margin = new Padding(0);
             entrada_divisao.Name = "entrada_divisao";
             entrada_divisao.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -157,6 +157,7 @@
             entrada_divisao.Text = "÷";
             entrada_divisao.TextColor = Color.FromArgb(103, 194, 58);
             entrada_divisao.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_divisao.Click += entrada_divisao_Click;
             // 
             // entrada_porcentagem
             // 
@@ -169,7 +170,7 @@
             entrada_porcentagem.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_porcentagem.ImeMode = ImeMode.NoControl;
             entrada_porcentagem.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_porcentagem.Location = new Point(161, 208);
+            entrada_porcentagem.Location = new Point(168, 208);
             entrada_porcentagem.Margin = new Padding(0);
             entrada_porcentagem.Name = "entrada_porcentagem";
             entrada_porcentagem.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -179,6 +180,7 @@
             entrada_porcentagem.Text = "%";
             entrada_porcentagem.TextColor = Color.FromArgb(103, 194, 58);
             entrada_porcentagem.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_porcentagem.Click += entrada_porcentagem_Click;
             // 
             // entrada_parenteses
             // 
@@ -223,6 +225,7 @@
             entrada_clear.Text = "C";
             entrada_clear.TextColor = Color.FromArgb(245, 108, 108);
             entrada_clear.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_clear.Click += entrada_clear_Click;
             // 
             // entrada_multiplicacao
             // 
@@ -235,7 +238,7 @@
             entrada_multiplicacao.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_multiplicacao.ImeMode = ImeMode.NoControl;
             entrada_multiplicacao.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_multiplicacao.Location = new Point(232, 280);
+            entrada_multiplicacao.Location = new Point(240, 280);
             entrada_multiplicacao.Margin = new Padding(0);
             entrada_multiplicacao.Name = "entrada_multiplicacao";
             entrada_multiplicacao.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -245,6 +248,7 @@
             entrada_multiplicacao.Text = "x";
             entrada_multiplicacao.TextColor = Color.FromArgb(103, 194, 58);
             entrada_multiplicacao.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_multiplicacao.Click += entrada_multiplicacao_Click;
             // 
             // entrada_9
             // 
@@ -257,7 +261,7 @@
             entrada_9.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_9.ImeMode = ImeMode.NoControl;
             entrada_9.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_9.Location = new Point(161, 280);
+            entrada_9.Location = new Point(168, 280);
             entrada_9.Margin = new Padding(0);
             entrada_9.Name = "entrada_9";
             entrada_9.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -267,6 +271,7 @@
             entrada_9.Text = "9";
             entrada_9.TextColor = Color.White;
             entrada_9.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_9.Click += entrada_9_Click;
             // 
             // entrada_8
             // 
@@ -289,6 +294,7 @@
             entrada_8.Text = "8";
             entrada_8.TextColor = Color.White;
             entrada_8.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_8.Click += entrada_8_Click;
             // 
             // entrada_7
             // 
@@ -311,6 +317,7 @@
             entrada_7.Text = "7";
             entrada_7.TextColor = Color.White;
             entrada_7.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_7.Click += entrada_7_Click;
             // 
             // entrada_subtração
             // 
@@ -323,7 +330,7 @@
             entrada_subtração.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_subtração.ImeMode = ImeMode.NoControl;
             entrada_subtração.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_subtração.Location = new Point(232, 352);
+            entrada_subtração.Location = new Point(240, 352);
             entrada_subtração.Margin = new Padding(0);
             entrada_subtração.Name = "entrada_subtração";
             entrada_subtração.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -333,6 +340,7 @@
             entrada_subtração.Text = "-";
             entrada_subtração.TextColor = Color.FromArgb(103, 194, 58);
             entrada_subtração.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_subtração.Click += entrada_subtração_Click;
             // 
             // entrada_6
             // 
@@ -345,7 +353,7 @@
             entrada_6.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_6.ImeMode = ImeMode.NoControl;
             entrada_6.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_6.Location = new Point(161, 352);
+            entrada_6.Location = new Point(168, 352);
             entrada_6.Margin = new Padding(0);
             entrada_6.Name = "entrada_6";
             entrada_6.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -355,6 +363,7 @@
             entrada_6.Text = "6";
             entrada_6.TextColor = Color.White;
             entrada_6.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_6.Click += entrada_6_Click;
             // 
             // entrada_5
             // 
@@ -377,6 +386,7 @@
             entrada_5.Text = "5";
             entrada_5.TextColor = Color.White;
             entrada_5.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_5.Click += entrada_5_Click;
             // 
             // entrada_4
             // 
@@ -399,6 +409,7 @@
             entrada_4.Text = "4";
             entrada_4.TextColor = Color.White;
             entrada_4.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_4.Click += entrada_4_Click;
             // 
             // entrada_soma
             // 
@@ -411,7 +422,7 @@
             entrada_soma.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_soma.ImeMode = ImeMode.NoControl;
             entrada_soma.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_soma.Location = new Point(232, 424);
+            entrada_soma.Location = new Point(240, 424);
             entrada_soma.Margin = new Padding(0);
             entrada_soma.Name = "entrada_soma";
             entrada_soma.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -421,6 +432,7 @@
             entrada_soma.Text = "+";
             entrada_soma.TextColor = Color.FromArgb(103, 194, 58);
             entrada_soma.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_soma.Click += entrada_soma_Click;
             // 
             // entrada_3
             // 
@@ -433,7 +445,7 @@
             entrada_3.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_3.ImeMode = ImeMode.NoControl;
             entrada_3.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_3.Location = new Point(161, 424);
+            entrada_3.Location = new Point(168, 424);
             entrada_3.Margin = new Padding(0);
             entrada_3.Name = "entrada_3";
             entrada_3.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -443,6 +455,7 @@
             entrada_3.Text = "3";
             entrada_3.TextColor = Color.White;
             entrada_3.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_3.Click += entrada_3_Click;
             // 
             // entrada_2
             // 
@@ -465,6 +478,7 @@
             entrada_2.Text = "2";
             entrada_2.TextColor = Color.White;
             entrada_2.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_2.Click += entrada_2_Click;
             // 
             // entrada_1
             // 
@@ -487,6 +501,7 @@
             entrada_1.Text = "1";
             entrada_1.TextColor = Color.White;
             entrada_1.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_1.Click += entrada_1_Click;
             // 
             // entrada_resultado
             // 
@@ -495,11 +510,11 @@
             entrada_resultado.ButtonType = ReaLTaiizor.Util.HopeButtonType.Success;
             entrada_resultado.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_resultado.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_resultado.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            entrada_resultado.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             entrada_resultado.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_resultado.ImeMode = ImeMode.NoControl;
             entrada_resultado.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_resultado.Location = new Point(232, 496);
+            entrada_resultado.Location = new Point(240, 496);
             entrada_resultado.Margin = new Padding(0);
             entrada_resultado.Name = "entrada_resultado";
             entrada_resultado.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -522,7 +537,7 @@
             entrada_virgula.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_virgula.ImeMode = ImeMode.NoControl;
             entrada_virgula.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_virgula.Location = new Point(161, 496);
+            entrada_virgula.Location = new Point(168, 496);
             entrada_virgula.Margin = new Padding(0);
             entrada_virgula.Name = "entrada_virgula";
             entrada_virgula.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -554,6 +569,7 @@
             entrada_0.Text = "0";
             entrada_0.TextColor = Color.White;
             entrada_0.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_0.Click += entrada_0_Click;
             // 
             // entrada_menos
             // 
