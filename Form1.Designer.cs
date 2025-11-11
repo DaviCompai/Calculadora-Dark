@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             Formulario = new ReaLTaiizor.Forms.ForeverForm();
+            listBox1 = new ListBox();
             foreverTextBox1 = new ReaLTaiizor.Controls.ForeverTextBox();
             hopeRoundButton17 = new ReaLTaiizor.Controls.HopeRoundButton();
             hopeRoundButton18 = new ReaLTaiizor.Controls.HopeRoundButton();
@@ -61,6 +62,7 @@
             Formulario.BackColor = Color.FromArgb(60, 70, 73);
             Formulario.BaseColor = Color.FromArgb(60, 70, 73);
             Formulario.BorderColor = Color.Transparent;
+            Formulario.Controls.Add(listBox1);
             Formulario.Controls.Add(foreverTextBox1);
             Formulario.Controls.Add(hopeRoundButton17);
             Formulario.Controls.Add(hopeRoundButton18);
@@ -105,6 +107,17 @@
             Formulario.TextLight = Color.SeaGreen;
             Formulario.Click += Formulario_Click;
             // 
+            // listBox1
+            // 
+            listBox1.BackColor = Color.FromArgb(60, 70, 73);
+            listBox1.BorderStyle = BorderStyle.None;
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 21;
+            listBox1.Location = new Point(16, 120);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(288, 84);
+            listBox1.TabIndex = 25;
+            // 
             // foreverTextBox1
             // 
             foreverTextBox1.BackColor = Color.Transparent;
@@ -113,7 +126,7 @@
             foreverTextBox1.FocusOnHover = false;
             foreverTextBox1.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
             foreverTextBox1.ForeColor = Color.FromArgb(192, 192, 192);
-            foreverTextBox1.Location = new Point(16, 120);
+            foreverTextBox1.Location = new Point(16, 64);
             foreverTextBox1.MaxLength = 32767;
             foreverTextBox1.Multiline = false;
             foreverTextBox1.Name = "foreverTextBox1";
@@ -656,5 +669,6 @@
         private ReaLTaiizor.Controls.HopeRoundButton hopeRoundButton7;
         private ReaLTaiizor.Controls.HopeRoundButton hopeRoundButton8;
         private ReaLTaiizor.Controls.ForeverTextBox foreverTextBox1;
+        private ListBox listBox1;
     }
 }
