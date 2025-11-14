@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             Formulario = new ReaLTaiizor.Forms.ForeverForm();
-            saida = new ListBox();
-            entrada = new ReaLTaiizor.Controls.ForeverTextBox();
+            entradas = new Panel();
             entrada_divisao = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_porcentagem = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_parenteses = new ReaLTaiizor.Controls.HopeRoundButton();
@@ -51,10 +50,13 @@
             entrada_virgula = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_0 = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_menos = new ReaLTaiizor.Controls.HopeRoundButton();
+            entrada = new RichTextBox();
+            saida = new ListBox();
             foreverClose1 = new ReaLTaiizor.Controls.ForeverClose();
             foreverMaximize1 = new ReaLTaiizor.Controls.ForeverMaximize();
             foreverMinimize1 = new ReaLTaiizor.Controls.ForeverMinimize();
             Formulario.SuspendLayout();
+            entradas.SuspendLayout();
             SuspendLayout();
             // 
             // Formulario
@@ -62,28 +64,9 @@
             Formulario.BackColor = Color.FromArgb(60, 70, 73);
             Formulario.BaseColor = Color.FromArgb(60, 70, 73);
             Formulario.BorderColor = Color.Transparent;
-            Formulario.Controls.Add(saida);
+            Formulario.Controls.Add(entradas);
             Formulario.Controls.Add(entrada);
-            Formulario.Controls.Add(entrada_divisao);
-            Formulario.Controls.Add(entrada_porcentagem);
-            Formulario.Controls.Add(entrada_parenteses);
-            Formulario.Controls.Add(entrada_clear);
-            Formulario.Controls.Add(entrada_multiplicacao);
-            Formulario.Controls.Add(entrada_9);
-            Formulario.Controls.Add(entrada_8);
-            Formulario.Controls.Add(entrada_7);
-            Formulario.Controls.Add(entrada_subtração);
-            Formulario.Controls.Add(entrada_6);
-            Formulario.Controls.Add(entrada_5);
-            Formulario.Controls.Add(entrada_4);
-            Formulario.Controls.Add(entrada_soma);
-            Formulario.Controls.Add(entrada_3);
-            Formulario.Controls.Add(entrada_2);
-            Formulario.Controls.Add(entrada_1);
-            Formulario.Controls.Add(entrada_resultado);
-            Formulario.Controls.Add(entrada_virgula);
-            Formulario.Controls.Add(entrada_0);
-            Formulario.Controls.Add(entrada_menos);
+            Formulario.Controls.Add(saida);
             Formulario.Controls.Add(foreverClose1);
             Formulario.Controls.Add(foreverMaximize1);
             Formulario.Controls.Add(foreverMinimize1);
@@ -100,41 +83,39 @@
             Formulario.Name = "Formulario";
             Formulario.Padding = new Padding(1, 51, 1, 1);
             Formulario.Sizable = true;
-            Formulario.Size = new Size(320, 569);
+            Formulario.Size = new Size(309, 569);
             Formulario.TabIndex = 0;
             Formulario.Text = "Calculadora";
             Formulario.TextColor = Color.FromArgb(234, 234, 234);
             Formulario.TextLight = Color.SeaGreen;
             Formulario.Click += Formulario_Click;
             // 
-            // saida
+            // entradas
             // 
-            saida.BackColor = Color.FromArgb(60, 70, 73);
-            saida.BorderStyle = BorderStyle.None;
-            saida.FormattingEnabled = true;
-            saida.ItemHeight = 21;
-            saida.Location = new Point(16, 120);
-            saida.Name = "saida";
-            saida.Size = new Size(288, 63);
-            saida.TabIndex = 25;
-            // 
-            // entrada
-            // 
-            entrada.BackColor = Color.Transparent;
-            entrada.BaseColor = Color.FromArgb(45, 47, 49);
-            entrada.BorderColor = Color.FromArgb(35, 168, 109);
-            entrada.FocusOnHover = false;
-            entrada.Font = new Font("Segoe UI", 24F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            entrada.ForeColor = Color.FromArgb(192, 192, 192);
-            entrada.Location = new Point(16, 64);
-            entrada.MaxLength = 32767;
-            entrada.Multiline = false;
-            entrada.Name = "entrada";
-            entrada.ReadOnly = false;
-            entrada.Size = new Size(288, 54);
-            entrada.TabIndex = 24;
-            entrada.TextAlign = HorizontalAlignment.Left;
-            entrada.UseSystemPasswordChar = false;
+            entradas.Controls.Add(entrada_divisao);
+            entradas.Controls.Add(entrada_porcentagem);
+            entradas.Controls.Add(entrada_parenteses);
+            entradas.Controls.Add(entrada_clear);
+            entradas.Controls.Add(entrada_multiplicacao);
+            entradas.Controls.Add(entrada_9);
+            entradas.Controls.Add(entrada_8);
+            entradas.Controls.Add(entrada_7);
+            entradas.Controls.Add(entrada_subtração);
+            entradas.Controls.Add(entrada_6);
+            entradas.Controls.Add(entrada_5);
+            entradas.Controls.Add(entrada_4);
+            entradas.Controls.Add(entrada_soma);
+            entradas.Controls.Add(entrada_3);
+            entradas.Controls.Add(entrada_2);
+            entradas.Controls.Add(entrada_1);
+            entradas.Controls.Add(entrada_resultado);
+            entradas.Controls.Add(entrada_virgula);
+            entradas.Controls.Add(entrada_0);
+            entradas.Controls.Add(entrada_menos);
+            entradas.Location = new Point(8, 200);
+            entradas.Name = "entradas";
+            entradas.Size = new Size(288, 360);
+            entradas.TabIndex = 27;
             // 
             // entrada_divisao
             // 
@@ -143,11 +124,11 @@
             entrada_divisao.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_divisao.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_divisao.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_divisao.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            entrada_divisao.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             entrada_divisao.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_divisao.ImeMode = ImeMode.NoControl;
             entrada_divisao.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_divisao.Location = new Point(240, 208);
+            entrada_divisao.Location = new Point(224, 8);
             entrada_divisao.Margin = new Padding(0);
             entrada_divisao.Name = "entrada_divisao";
             entrada_divisao.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -166,11 +147,11 @@
             entrada_porcentagem.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_porcentagem.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_porcentagem.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_porcentagem.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            entrada_porcentagem.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
             entrada_porcentagem.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_porcentagem.ImeMode = ImeMode.NoControl;
             entrada_porcentagem.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_porcentagem.Location = new Point(168, 208);
+            entrada_porcentagem.Location = new Point(152, 8);
             entrada_porcentagem.Margin = new Padding(0);
             entrada_porcentagem.Name = "entrada_porcentagem";
             entrada_porcentagem.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -185,15 +166,16 @@
             // entrada_parenteses
             // 
             entrada_parenteses.BackColor = Color.Transparent;
+            entrada_parenteses.BackgroundImageLayout = ImageLayout.None;
             entrada_parenteses.BorderColor = Color.FromArgb(220, 223, 230);
             entrada_parenteses.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_parenteses.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_parenteses.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_parenteses.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            entrada_parenteses.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             entrada_parenteses.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_parenteses.ImeMode = ImeMode.NoControl;
             entrada_parenteses.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_parenteses.Location = new Point(96, 208);
+            entrada_parenteses.Location = new Point(80, 8);
             entrada_parenteses.Margin = new Padding(0);
             entrada_parenteses.Name = "entrada_parenteses";
             entrada_parenteses.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -207,6 +189,7 @@
             // entrada_clear
             // 
             entrada_clear.BackColor = Color.Transparent;
+            entrada_clear.BackgroundImageLayout = ImageLayout.None;
             entrada_clear.BorderColor = Color.FromArgb(220, 223, 230);
             entrada_clear.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_clear.DangerColor = Color.FromArgb(245, 108, 108);
@@ -215,7 +198,7 @@
             entrada_clear.HoverTextColor = Color.FromArgb(179, 65, 65);
             entrada_clear.ImeMode = ImeMode.NoControl;
             entrada_clear.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_clear.Location = new Point(22, 208);
+            entrada_clear.Location = new Point(8, 8);
             entrada_clear.Margin = new Padding(0);
             entrada_clear.Name = "entrada_clear";
             entrada_clear.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -234,11 +217,11 @@
             entrada_multiplicacao.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_multiplicacao.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_multiplicacao.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_multiplicacao.Font = new Font("Segoe UI", 18F, FontStyle.Bold);
+            entrada_multiplicacao.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             entrada_multiplicacao.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_multiplicacao.ImeMode = ImeMode.NoControl;
             entrada_multiplicacao.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_multiplicacao.Location = new Point(240, 280);
+            entrada_multiplicacao.Location = new Point(224, 80);
             entrada_multiplicacao.Margin = new Padding(0);
             entrada_multiplicacao.Name = "entrada_multiplicacao";
             entrada_multiplicacao.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -261,7 +244,7 @@
             entrada_9.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_9.ImeMode = ImeMode.NoControl;
             entrada_9.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_9.Location = new Point(168, 280);
+            entrada_9.Location = new Point(152, 80);
             entrada_9.Margin = new Padding(0);
             entrada_9.Name = "entrada_9";
             entrada_9.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -284,7 +267,7 @@
             entrada_8.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_8.ImeMode = ImeMode.NoControl;
             entrada_8.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_8.Location = new Point(96, 280);
+            entrada_8.Location = new Point(80, 80);
             entrada_8.Margin = new Padding(0);
             entrada_8.Name = "entrada_8";
             entrada_8.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -307,7 +290,7 @@
             entrada_7.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_7.ImeMode = ImeMode.NoControl;
             entrada_7.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_7.Location = new Point(22, 280);
+            entrada_7.Location = new Point(6, 80);
             entrada_7.Margin = new Padding(0);
             entrada_7.Name = "entrada_7";
             entrada_7.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -326,11 +309,11 @@
             entrada_subtração.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_subtração.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_subtração.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_subtração.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            entrada_subtração.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             entrada_subtração.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_subtração.ImeMode = ImeMode.NoControl;
             entrada_subtração.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_subtração.Location = new Point(240, 352);
+            entrada_subtração.Location = new Point(224, 152);
             entrada_subtração.Margin = new Padding(0);
             entrada_subtração.Name = "entrada_subtração";
             entrada_subtração.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -353,7 +336,7 @@
             entrada_6.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_6.ImeMode = ImeMode.NoControl;
             entrada_6.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_6.Location = new Point(168, 352);
+            entrada_6.Location = new Point(152, 152);
             entrada_6.Margin = new Padding(0);
             entrada_6.Name = "entrada_6";
             entrada_6.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -376,7 +359,7 @@
             entrada_5.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_5.ImeMode = ImeMode.NoControl;
             entrada_5.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_5.Location = new Point(96, 352);
+            entrada_5.Location = new Point(80, 152);
             entrada_5.Margin = new Padding(0);
             entrada_5.Name = "entrada_5";
             entrada_5.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -399,7 +382,7 @@
             entrada_4.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_4.ImeMode = ImeMode.NoControl;
             entrada_4.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_4.Location = new Point(22, 352);
+            entrada_4.Location = new Point(6, 152);
             entrada_4.Margin = new Padding(0);
             entrada_4.Name = "entrada_4";
             entrada_4.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -418,11 +401,11 @@
             entrada_soma.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_soma.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_soma.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_soma.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            entrada_soma.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             entrada_soma.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_soma.ImeMode = ImeMode.NoControl;
             entrada_soma.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_soma.Location = new Point(240, 424);
+            entrada_soma.Location = new Point(224, 224);
             entrada_soma.Margin = new Padding(0);
             entrada_soma.Name = "entrada_soma";
             entrada_soma.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -445,7 +428,7 @@
             entrada_3.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_3.ImeMode = ImeMode.NoControl;
             entrada_3.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_3.Location = new Point(168, 424);
+            entrada_3.Location = new Point(152, 224);
             entrada_3.Margin = new Padding(0);
             entrada_3.Name = "entrada_3";
             entrada_3.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -468,7 +451,7 @@
             entrada_2.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_2.ImeMode = ImeMode.NoControl;
             entrada_2.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_2.Location = new Point(96, 424);
+            entrada_2.Location = new Point(80, 224);
             entrada_2.Margin = new Padding(0);
             entrada_2.Name = "entrada_2";
             entrada_2.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -491,7 +474,7 @@
             entrada_1.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_1.ImeMode = ImeMode.NoControl;
             entrada_1.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_1.Location = new Point(22, 424);
+            entrada_1.Location = new Point(6, 224);
             entrada_1.Margin = new Padding(0);
             entrada_1.Name = "entrada_1";
             entrada_1.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -514,7 +497,7 @@
             entrada_resultado.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_resultado.ImeMode = ImeMode.NoControl;
             entrada_resultado.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_resultado.Location = new Point(240, 496);
+            entrada_resultado.Location = new Point(224, 296);
             entrada_resultado.Margin = new Padding(0);
             entrada_resultado.Name = "entrada_resultado";
             entrada_resultado.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -537,7 +520,7 @@
             entrada_virgula.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_virgula.ImeMode = ImeMode.NoControl;
             entrada_virgula.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_virgula.Location = new Point(168, 496);
+            entrada_virgula.Location = new Point(152, 296);
             entrada_virgula.Margin = new Padding(0);
             entrada_virgula.Name = "entrada_virgula";
             entrada_virgula.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -547,6 +530,7 @@
             entrada_virgula.Text = ",";
             entrada_virgula.TextColor = Color.White;
             entrada_virgula.WarningColor = Color.FromArgb(230, 162, 60);
+            entrada_virgula.Click += entrada_virgula_Click;
             // 
             // entrada_0
             // 
@@ -559,7 +543,7 @@
             entrada_0.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_0.ImeMode = ImeMode.NoControl;
             entrada_0.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_0.Location = new Point(96, 496);
+            entrada_0.Location = new Point(80, 296);
             entrada_0.Margin = new Padding(0);
             entrada_0.Name = "entrada_0";
             entrada_0.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -582,7 +566,7 @@
             entrada_menos.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_menos.ImeMode = ImeMode.NoControl;
             entrada_menos.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_menos.Location = new Point(22, 496);
+            entrada_menos.Location = new Point(6, 296);
             entrada_menos.Margin = new Padding(0);
             entrada_menos.Name = "entrada_menos";
             entrada_menos.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -594,6 +578,33 @@
             entrada_menos.WarningColor = Color.FromArgb(230, 162, 60);
             entrada_menos.Click += hopeRoundButton2_Click;
             // 
+            // entrada
+            // 
+            entrada.BackColor = Color.FromArgb(45, 47, 49);
+            entrada.BorderStyle = BorderStyle.None;
+            entrada.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            entrada.ForeColor = Color.White;
+            entrada.Location = new Point(8, 56);
+            entrada.Multiline = false;
+            entrada.Name = "entrada";
+            entrada.RightToLeft = RightToLeft.No;
+            entrada.Size = new Size(288, 48);
+            entrada.TabIndex = 26;
+            entrada.Text = "";
+            // 
+            // saida
+            // 
+            saida.BackColor = Color.FromArgb(60, 70, 73);
+            saida.BorderStyle = BorderStyle.None;
+            saida.ForeColor = SystemColors.Window;
+            saida.FormattingEnabled = true;
+            saida.ItemHeight = 21;
+            saida.Location = new Point(8, 104);
+            saida.Name = "saida";
+            saida.RightToLeft = RightToLeft.Yes;
+            saida.Size = new Size(288, 63);
+            saida.TabIndex = 25;
+            // 
             // foreverClose1
             // 
             foreverClose1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -602,7 +613,7 @@
             foreverClose1.DefaultLocation = true;
             foreverClose1.DownColor = Color.FromArgb(30, 0, 0, 0);
             foreverClose1.Font = new Font("Marlett", 10F);
-            foreverClose1.Location = new Point(290, 16);
+            foreverClose1.Location = new Point(279, 16);
             foreverClose1.Name = "foreverClose1";
             foreverClose1.OverColor = Color.FromArgb(30, 255, 255, 255);
             foreverClose1.Size = new Size(18, 18);
@@ -618,7 +629,7 @@
             foreverMaximize1.DefaultLocation = true;
             foreverMaximize1.DownColor = Color.FromArgb(30, 0, 0, 0);
             foreverMaximize1.Font = new Font("Marlett", 12F);
-            foreverMaximize1.Location = new Point(266, 16);
+            foreverMaximize1.Location = new Point(255, 16);
             foreverMaximize1.Name = "foreverMaximize1";
             foreverMaximize1.OverColor = Color.FromArgb(30, 255, 255, 255);
             foreverMaximize1.Size = new Size(18, 18);
@@ -634,7 +645,7 @@
             foreverMinimize1.DefaultLocation = true;
             foreverMinimize1.DownColor = Color.FromArgb(30, 0, 0, 0);
             foreverMinimize1.Font = new Font("Marlett", 12F);
-            foreverMinimize1.Location = new Point(242, 16);
+            foreverMinimize1.Location = new Point(231, 16);
             foreverMinimize1.Name = "foreverMinimize1";
             foreverMinimize1.OverColor = Color.FromArgb(30, 255, 255, 255);
             foreverMinimize1.Size = new Size(18, 18);
@@ -646,7 +657,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(320, 569);
+            ClientSize = new Size(309, 569);
             Controls.Add(Formulario);
             FormBorderStyle = FormBorderStyle.None;
             Name = "Form1";
@@ -654,6 +665,7 @@
             Text = "Form1";
             TransparencyKey = Color.Fuchsia;
             Formulario.ResumeLayout(false);
+            entradas.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -683,7 +695,8 @@
         private ReaLTaiizor.Controls.HopeRoundButton entrada_3;
         private ReaLTaiizor.Controls.HopeRoundButton entrada_2;
         private ReaLTaiizor.Controls.HopeRoundButton entrada_1;
-        private ReaLTaiizor.Controls.ForeverTextBox entrada;
         private ListBox saida;
+        private RichTextBox entrada;
+        private Panel entradas;
     }
 }
