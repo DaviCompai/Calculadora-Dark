@@ -31,8 +31,8 @@
             Formulario = new ReaLTaiizor.Forms.ForeverForm();
             entradas = new Panel();
             entrada_divisao = new ReaLTaiizor.Controls.HopeRoundButton();
-            entrada_porcentagem = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_parenteses = new ReaLTaiizor.Controls.HopeRoundButton();
+            hopeRoundButton1 = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_clear = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_multiplicacao = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_9 = new ReaLTaiizor.Controls.HopeRoundButton();
@@ -93,8 +93,8 @@
             // entradas
             // 
             entradas.Controls.Add(entrada_divisao);
-            entradas.Controls.Add(entrada_porcentagem);
             entradas.Controls.Add(entrada_parenteses);
+            entradas.Controls.Add(hopeRoundButton1);
             entradas.Controls.Add(entrada_clear);
             entradas.Controls.Add(entrada_multiplicacao);
             entradas.Controls.Add(entrada_9);
@@ -124,7 +124,7 @@
             entrada_divisao.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_divisao.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_divisao.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_divisao.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            entrada_divisao.Font = new Font("Tahoma", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             entrada_divisao.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_divisao.ImeMode = ImeMode.NoControl;
             entrada_divisao.InfoColor = Color.FromArgb(144, 147, 153);
@@ -140,29 +140,6 @@
             entrada_divisao.WarningColor = Color.FromArgb(230, 162, 60);
             entrada_divisao.Click += entrada_divisao_Click;
             // 
-            // entrada_porcentagem
-            // 
-            entrada_porcentagem.BackColor = Color.Transparent;
-            entrada_porcentagem.BorderColor = Color.FromArgb(220, 223, 230);
-            entrada_porcentagem.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
-            entrada_porcentagem.DangerColor = Color.FromArgb(245, 108, 108);
-            entrada_porcentagem.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_porcentagem.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            entrada_porcentagem.HoverTextColor = Color.FromArgb(66, 140, 25);
-            entrada_porcentagem.ImeMode = ImeMode.NoControl;
-            entrada_porcentagem.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_porcentagem.Location = new Point(152, 8);
-            entrada_porcentagem.Margin = new Padding(0);
-            entrada_porcentagem.Name = "entrada_porcentagem";
-            entrada_porcentagem.PrimaryColor = Color.FromArgb(27, 36, 38);
-            entrada_porcentagem.Size = new Size(60, 60);
-            entrada_porcentagem.SuccessColor = Color.FromArgb(103, 194, 58);
-            entrada_porcentagem.TabIndex = 22;
-            entrada_porcentagem.Text = "%";
-            entrada_porcentagem.TextColor = Color.FromArgb(103, 194, 58);
-            entrada_porcentagem.WarningColor = Color.FromArgb(230, 162, 60);
-            entrada_porcentagem.Click += entrada_porcentagem_Click;
-            // 
             // entrada_parenteses
             // 
             entrada_parenteses.BackColor = Color.Transparent;
@@ -171,11 +148,11 @@
             entrada_parenteses.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_parenteses.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_parenteses.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_parenteses.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            entrada_parenteses.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             entrada_parenteses.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_parenteses.ImeMode = ImeMode.NoControl;
             entrada_parenteses.InfoColor = Color.FromArgb(144, 147, 153);
-            entrada_parenteses.Location = new Point(80, 8);
+            entrada_parenteses.Location = new Point(152, 8);
             entrada_parenteses.Margin = new Padding(0);
             entrada_parenteses.Name = "entrada_parenteses";
             entrada_parenteses.PrimaryColor = Color.FromArgb(27, 36, 38);
@@ -185,6 +162,30 @@
             entrada_parenteses.Text = "()";
             entrada_parenteses.TextColor = Color.FromArgb(103, 194, 58);
             entrada_parenteses.WarningColor = Color.FromArgb(230, 162, 60);
+            // 
+            // hopeRoundButton1
+            // 
+            hopeRoundButton1.BackColor = Color.Transparent;
+            hopeRoundButton1.BackgroundImageLayout = ImageLayout.None;
+            hopeRoundButton1.BorderColor = Color.FromArgb(220, 223, 230);
+            hopeRoundButton1.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            hopeRoundButton1.DangerColor = Color.FromArgb(245, 108, 108);
+            hopeRoundButton1.DefaultColor = Color.FromArgb(255, 255, 255);
+            hopeRoundButton1.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            hopeRoundButton1.HoverTextColor = Color.FromArgb(179, 65, 65);
+            hopeRoundButton1.ImeMode = ImeMode.NoControl;
+            hopeRoundButton1.InfoColor = Color.FromArgb(144, 147, 153);
+            hopeRoundButton1.Location = new Point(80, 8);
+            hopeRoundButton1.Margin = new Padding(0);
+            hopeRoundButton1.Name = "hopeRoundButton1";
+            hopeRoundButton1.PrimaryColor = Color.FromArgb(27, 36, 38);
+            hopeRoundButton1.Size = new Size(60, 60);
+            hopeRoundButton1.SuccessColor = Color.FromArgb(103, 194, 58);
+            hopeRoundButton1.TabIndex = 20;
+            hopeRoundButton1.Text = "⌫";
+            hopeRoundButton1.TextColor = Color.FromArgb(245, 108, 108);
+            hopeRoundButton1.WarningColor = Color.FromArgb(230, 162, 60);
+            hopeRoundButton1.Click += entrada_clear_Click;
             // 
             // entrada_clear
             // 
@@ -217,7 +218,7 @@
             entrada_multiplicacao.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_multiplicacao.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_multiplicacao.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_multiplicacao.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            entrada_multiplicacao.Font = new Font("Tahoma", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             entrada_multiplicacao.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_multiplicacao.ImeMode = ImeMode.NoControl;
             entrada_multiplicacao.InfoColor = Color.FromArgb(144, 147, 153);
@@ -228,7 +229,7 @@
             entrada_multiplicacao.Size = new Size(60, 60);
             entrada_multiplicacao.SuccessColor = Color.FromArgb(103, 194, 58);
             entrada_multiplicacao.TabIndex = 19;
-            entrada_multiplicacao.Text = "x";
+            entrada_multiplicacao.Text = "X";
             entrada_multiplicacao.TextColor = Color.FromArgb(103, 194, 58);
             entrada_multiplicacao.WarningColor = Color.FromArgb(230, 162, 60);
             entrada_multiplicacao.Click += entrada_multiplicacao_Click;
@@ -309,7 +310,7 @@
             entrada_subtração.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_subtração.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_subtração.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_subtração.Font = new Font("Segoe UI", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            entrada_subtração.Font = new Font("Tahoma", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             entrada_subtração.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_subtração.ImeMode = ImeMode.NoControl;
             entrada_subtração.InfoColor = Color.FromArgb(144, 147, 153);
@@ -401,7 +402,7 @@
             entrada_soma.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_soma.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_soma.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_soma.Font = new Font("Segoe UI", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            entrada_soma.Font = new Font("Tahoma", 27.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             entrada_soma.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_soma.ImeMode = ImeMode.NoControl;
             entrada_soma.InfoColor = Color.FromArgb(144, 147, 153);
@@ -493,7 +494,7 @@
             entrada_resultado.ButtonType = ReaLTaiizor.Util.HopeButtonType.Success;
             entrada_resultado.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_resultado.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_resultado.Font = new Font("Segoe UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            entrada_resultado.Font = new Font("Tahoma", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             entrada_resultado.HoverTextColor = Color.FromArgb(224, 224, 224);
             entrada_resultado.ImeMode = ImeMode.NoControl;
             entrada_resultado.InfoColor = Color.FromArgb(144, 147, 153);
@@ -562,8 +563,8 @@
             entrada_menos.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             entrada_menos.DangerColor = Color.FromArgb(245, 108, 108);
             entrada_menos.DefaultColor = Color.FromArgb(255, 255, 255);
-            entrada_menos.Font = new Font("Segoe UI", 18F);
-            entrada_menos.HoverTextColor = Color.FromArgb(224, 224, 224);
+            entrada_menos.Font = new Font("Segoe UI Emoji", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            entrada_menos.HoverTextColor = Color.FromArgb(66, 140, 25);
             entrada_menos.ImeMode = ImeMode.NoControl;
             entrada_menos.InfoColor = Color.FromArgb(144, 147, 153);
             entrada_menos.Location = new Point(6, 296);
@@ -573,8 +574,8 @@
             entrada_menos.Size = new Size(60, 60);
             entrada_menos.SuccessColor = Color.FromArgb(103, 194, 58);
             entrada_menos.TabIndex = 4;
-            entrada_menos.Text = "+/-";
-            entrada_menos.TextColor = Color.White;
+            entrada_menos.Text = "🔀";
+            entrada_menos.TextColor = Color.FromArgb(103, 194, 58);
             entrada_menos.WarningColor = Color.FromArgb(230, 162, 60);
             entrada_menos.Click += hopeRoundButton2_Click;
             // 
@@ -680,7 +681,6 @@
         private ReaLTaiizor.Controls.HopeRoundButton entrada_virgula;
         private ReaLTaiizor.Controls.HopeRoundButton entrada_0;
         private ReaLTaiizor.Controls.HopeRoundButton entrada_divisao;
-        private ReaLTaiizor.Controls.HopeRoundButton entrada_porcentagem;
         private ReaLTaiizor.Controls.HopeRoundButton entrada_parenteses;
         private ReaLTaiizor.Controls.HopeRoundButton entrada_clear;
         private ReaLTaiizor.Controls.HopeRoundButton entrada_multiplicacao;
@@ -698,5 +698,6 @@
         private ListBox saida;
         private RichTextBox entrada;
         private Panel entradas;
+        private ReaLTaiizor.Controls.HopeRoundButton hopeRoundButton1;
     }
 }
