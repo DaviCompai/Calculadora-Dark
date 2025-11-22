@@ -1,4 +1,5 @@
-﻿namespace Exercicio_Calculadora
+﻿
+namespace Exercicio_Calculadora
 {
     partial class Form1
     {
@@ -32,7 +33,7 @@
             entradas = new Panel();
             entrada_divisao = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_parenteses = new ReaLTaiizor.Controls.HopeRoundButton();
-            hopeRoundButton1 = new ReaLTaiizor.Controls.HopeRoundButton();
+            remover1 = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_clear = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_multiplicacao = new ReaLTaiizor.Controls.HopeRoundButton();
             entrada_9 = new ReaLTaiizor.Controls.HopeRoundButton();
@@ -94,7 +95,7 @@
             // 
             entradas.Controls.Add(entrada_divisao);
             entradas.Controls.Add(entrada_parenteses);
-            entradas.Controls.Add(hopeRoundButton1);
+            entradas.Controls.Add(remover1);
             entradas.Controls.Add(entrada_clear);
             entradas.Controls.Add(entrada_multiplicacao);
             entradas.Controls.Add(entrada_9);
@@ -163,29 +164,29 @@
             entrada_parenteses.TextColor = Color.FromArgb(103, 194, 58);
             entrada_parenteses.WarningColor = Color.FromArgb(230, 162, 60);
             // 
-            // hopeRoundButton1
+            // remover1
             // 
-            hopeRoundButton1.BackColor = Color.Transparent;
-            hopeRoundButton1.BackgroundImageLayout = ImageLayout.None;
-            hopeRoundButton1.BorderColor = Color.FromArgb(220, 223, 230);
-            hopeRoundButton1.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
-            hopeRoundButton1.DangerColor = Color.FromArgb(245, 108, 108);
-            hopeRoundButton1.DefaultColor = Color.FromArgb(255, 255, 255);
-            hopeRoundButton1.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            hopeRoundButton1.HoverTextColor = Color.FromArgb(179, 65, 65);
-            hopeRoundButton1.ImeMode = ImeMode.NoControl;
-            hopeRoundButton1.InfoColor = Color.FromArgb(144, 147, 153);
-            hopeRoundButton1.Location = new Point(80, 8);
-            hopeRoundButton1.Margin = new Padding(0);
-            hopeRoundButton1.Name = "hopeRoundButton1";
-            hopeRoundButton1.PrimaryColor = Color.FromArgb(27, 36, 38);
-            hopeRoundButton1.Size = new Size(60, 60);
-            hopeRoundButton1.SuccessColor = Color.FromArgb(103, 194, 58);
-            hopeRoundButton1.TabIndex = 20;
-            hopeRoundButton1.Text = "⌫";
-            hopeRoundButton1.TextColor = Color.FromArgb(245, 108, 108);
-            hopeRoundButton1.WarningColor = Color.FromArgb(230, 162, 60);
-            hopeRoundButton1.Click += entrada_clear_Click;
+            remover1.BackColor = Color.Transparent;
+            remover1.BackgroundImageLayout = ImageLayout.None;
+            remover1.BorderColor = Color.FromArgb(220, 223, 230);
+            remover1.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
+            remover1.DangerColor = Color.FromArgb(245, 108, 108);
+            remover1.DefaultColor = Color.FromArgb(255, 255, 255);
+            remover1.Font = new Font("Tahoma", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            remover1.HoverTextColor = Color.FromArgb(179, 65, 65);
+            remover1.ImeMode = ImeMode.NoControl;
+            remover1.InfoColor = Color.FromArgb(144, 147, 153);
+            remover1.Location = new Point(80, 8);
+            remover1.Margin = new Padding(0);
+            remover1.Name = "remover1";
+            remover1.PrimaryColor = Color.FromArgb(27, 36, 38);
+            remover1.Size = new Size(60, 60);
+            remover1.SuccessColor = Color.FromArgb(103, 194, 58);
+            remover1.TabIndex = 20;
+            remover1.Text = "⌫";
+            remover1.TextColor = Color.FromArgb(245, 108, 108);
+            remover1.WarningColor = Color.FromArgb(230, 162, 60);
+            remover1.Click += remover1_Click;
             // 
             // entrada_clear
             // 
@@ -698,6 +699,6 @@
         private ListBox saida;
         private RichTextBox entrada;
         private Panel entradas;
-        private ReaLTaiizor.Controls.HopeRoundButton hopeRoundButton1;
+        private ReaLTaiizor.Controls.HopeRoundButton remover1;
     }
 }
