@@ -52,7 +52,7 @@ namespace Exercicio_Calculadora
             {
                 valores = Regex.Matches(Regex.Match(entrada, @"\d+(?:,\d+)?").Value, @"\d+(?:,\d+)?");
             }
-            ///if (!Regex.IsMatch(entrada, @"\d+(?:,\d+)?[÷x\+\-]\d+(?:,\d+)?"))
+
             if (valores.Count < 2)
             {
                 int casasDecimais = ContarCasasDecimais(valores[0].Value);
@@ -80,27 +80,16 @@ namespace Exercicio_Calculadora
                 valor = Regex.Match(entrada,somaSubtracao).Value;
                 tamanho = valor.Length;
             }
-            if (operacao == "÷")
+            float valor1 = float.Parse(valores[0].Value);
+            float valor2 = float.Parse(valores[1].Value);
+            float resultado = operacao switch
             {
-                float resultado = float.Parse(valores[0].Value) / float.Parse(valores[1].Value);
-                return conta(entrada.Substring(0,entrada.IndexOf(valor)) + conta(resultado.ToString(nAposVirgula) + entrada.Substring(entrada.IndexOf(valor)+tamanho)));
-            }
-            if (operacao == "x")
-            {
-                float resultado = float.Parse(valores[0].Value) * float.Parse(valores[1].Value);
-                return conta(entrada.Substring(0, entrada.IndexOf(valor)) + conta(resultado.ToString(nAposVirgula) + entrada.Substring(entrada.IndexOf(valor) + tamanho)));
-            }
-            if (operacao == "+")
-            {
-                float resultado = float.Parse(valores[0].Value) + float.Parse(valores[1].Value);
-                return conta(entrada.Substring(0, entrada.IndexOf(valor)) + conta(resultado.ToString(nAposVirgula) + entrada.Substring(entrada.IndexOf(valor) + tamanho)));
-            }
-            if (operacao == "-")
-            {
-                float resultado = float.Parse(valores[0].Value) - float.Parse(valores[1].Value);
-                return conta(entrada.Substring(0, entrada.IndexOf(valor)) + conta(resultado.ToString(nAposVirgula) + entrada.Substring(entrada.IndexOf(valor) + tamanho)));
-            }
-            return entrada;
+                "÷" => valor1 / valor2,
+                "x" => valor1 * valor2,
+                "+" => valor1 + valor2,
+                "-" => valor1 - valor2
+            };
+            return conta(entrada.Substring(0, entrada.IndexOf(valor)) + (resultado.ToString(nAposVirgula) + entrada.Substring(entrada.IndexOf(valor) + tamanho)));
         }
         public Form1()
         {
