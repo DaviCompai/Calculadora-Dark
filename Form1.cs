@@ -88,17 +88,17 @@ namespace Exercicio_Calculadora
             if (operacao == "x")
             {
                 float resultado = float.Parse(valores[0].Value) * float.Parse(valores[1].Value);
-                return conta(resultado.ToString(nAposVirgula) + entrada.Substring(tamanho));
+                return conta(entrada.Substring(0, entrada.IndexOf(valor)) + conta(resultado.ToString(nAposVirgula) + entrada.Substring(entrada.IndexOf(valor) + tamanho)));
             }
             if (operacao == "+")
             {
                 float resultado = float.Parse(valores[0].Value) + float.Parse(valores[1].Value);
-                return conta(resultado.ToString(nAposVirgula) + entrada.Substring(tamanho));
+                return conta(entrada.Substring(0, entrada.IndexOf(valor)) + conta(resultado.ToString(nAposVirgula) + entrada.Substring(entrada.IndexOf(valor) + tamanho)));
             }
             if (operacao == "-")
             {
                 float resultado = float.Parse(valores[0].Value) - float.Parse(valores[1].Value);
-                return conta(resultado.ToString(nAposVirgula) + entrada.Substring(tamanho));
+                return conta(entrada.Substring(0, entrada.IndexOf(valor)) + conta(resultado.ToString(nAposVirgula) + entrada.Substring(entrada.IndexOf(valor) + tamanho)));
             }
             return entrada;
         }
